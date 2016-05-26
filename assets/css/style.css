@@ -1,0 +1,122 @@
+body{ 
+	/*        */
+
+	background-image: url("../images/background_v01.jpg");
+	font-family: georgia;
+}
+
+#headerBox{
+		background-color: #d06a1F;
+		/*background-color: rgb(254,227,198); */
+		width: 200px;
+		/* height:50px; */
+		color: white;
+		font-size: 22px;
+		text-align: center;
+		letter-spacing: 1px;
+		padding-top: 22px;
+		padding-bottom: 22px;
+}
+
+#instructionsBox{
+	/*align-items : justify; */
+	text-align: justify;
+	margin-top: 10px;
+	/*background-color: #fee0c5; */
+	background-color: rgb(254,227,198);
+	width: 327px;
+	height:327px;  
+	font-size: 10px;
+	letter-spacing: 2px;
+	color:  green;
+}
+
+#instr01, #instr02, #instr03, #instr04, #instr05{
+	padding-top: 20px;
+	padding-left:  10px;
+	padding-right: 10px;
+}
+
+#randWinsLossesRow{
+		margin-top: 10px;
+		//padding-top: 10px;
+
+		width: 245px;
+		height:100px;
+		font-size: 11px;
+}
+
+#randNumbBox{
+	background-color: rgb(59,170,115); 
+	width: 177px;
+	height:68px;
+	float:left;
+
+	font-size: 30px;
+	text-align: center;
+	//text-align: justify-all;
+
+	padding-top: 25px;
+
+	color: white;
+}
+
+#winsLossesBox{
+	background-color: rgb(0,254,254);	
+	width: 57px;
+	height:92px;
+	float: right;
+}
+
+#winsCtr{
+	padding-top: 20px;
+	padding-left: 5px;
+}
+
+#lossesCtr{
+	padding-top: 20px;
+	padding-left: 5px;
+}
+
+#btn1, #btn2, #btn3, #btn4{
+	height:65px;
+	width: 65px;
+}
+
+#totalScoreHdr{
+	margin-top: 10px;
+	background-color: rgb(0,139,138);
+	width: 175px;
+	height:20px; 
+	color: rgb(0,254,254);
+}
+
+#totalScoreCtr{
+	margin-top: 10px;
+	
+	background-color: rgb(0,139,138); 
+	width: 175px;
+	height:85px; 
+	color: rgb(0,254,254); 
+
+	font-size: 30px;
+	text-align: center;
+	padding-top: 25px;
+
+}
+
+#footerBox{
+	margin-top: 10px;
+	/*background-color: #fee0c5; */
+	background-color: rgb(254,227,198);
+	width: 327px;
+	
+	padding: 20px 20px;
+
+	text-align: center;
+	font-size: 10px;
+	letter-spacing: 2px;
+	color:  green;
+
+
+}

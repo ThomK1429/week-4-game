@@ -1,0 +1,96 @@
+<!-- Homework04 - version-x 5/20/2016 - modified to 		-->
+<!-- 														-->
+
+<!-- Homework04 - Gem Collector using JQuery  - Due   5/28/2016 - author Tom Keel        -->
+
+<!-- xx Free sound files obtained at http://soundbible.com/1964-Small-Crowd-Applause.html -->
+<!-- xx They are used for educational purposes only                                       -->
+<!-- xx Actual sound file names have been renamed for readablity in terms of win or loss  -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>week-4-game</title>
+
+	<!-- Link to CSS files etc   -->    
+	<!-- <link href="assets/css/reset.css" rel="stylesheet" type="text/css">  --> 
+	<!--<link href='https://fonts.googleapis.com/css?family=Creepster' rel='stylesheet' type='text/css'>  --> 
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>week-4-game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+	</script>
+
+	<script>
+		$(document).ready(function(){
+   			$("#btn1").click(function(){
+        	alert("The Red Crystal was clicked.");
+    		});
+    		$("#btn2").click(function(){
+        	alert("The Blue Crystal was clicked");
+    		});
+    		$("#btn3").click(function(){
+        	alert("The Yellow Crystal was clicked");
+    		});
+    		$("#btn4").click(function(){
+        	alert("The Green Crystal was clicked");
+    		});
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="headerBox">CrystalsCollector!</div>
+
+	<div id="instructionsBox"></div>
+		<div id="instr01">You will be given a random number at the start of the game. </div> 
+		<div id="instr02">There are four crystals below.  By clicking on a crystal you will add a speicific amount of points to your total score. </div> 
+		<div id="instr03">You win the game by matching your total score to random number, you lose the game if  your total score goes above the random number. </div> 
+		<div id="instr04">The value of each crystal is hidden from you until you click on it. </div> 
+		<div id="instr05">Each time when the game starts, the game will change the values of each crystal.</div> 
+	</div>
+
+	<div id="randNumbBox">
+		
+
+	</div>
+
+	<div id="WinsLossesBox">
+		<div id="WinsCtr">Wins:</div>
+		<div id="LossesCtr">Losses:</div>
+	</div>
+
+
+	<div id="crystalButtons" align="left" style="padding-top:200px">
+		<img id="btn1" src="assets/images/crystal_red.jpg" alt="crystal_red" width="50px" height="50px">
+		<img id="btn2" src="assets/images/crystal_blue.jpg" alt="crystal_blue" width="50px" height="50px">
+		<img id="btn3" src="assets/images/crystal_yellow.jpg" alt="crystal_yellow" width="50px" height="50px">
+		<img id="btn4" src="assets/images/crystal_green.jpg" alt="crystal_green" width="50px" height="50px">
+	</div>
+
+	<div id="totalScoreHdr">Your total score is:</div>
+
+	<div id="totalScoreCtr"></div>
+
+	<div id="footerBox">
+		<!-- Footer processing -->
+		<div style="padding-top:25px; font-size: 10px;">
+	  		<em> &copy;Copyright 2016 Thom. Keel   </em> 
+	  	</div>
+	</div>
+
+</body>
+</html>
