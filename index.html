@@ -22,20 +22,26 @@
 	<div id="headerBox">CrystalsCollector!</div>
 
 	<div id="instructionsBox"> 
-		<div id="instr01"><br><strong>You will be given a random number at the start of the game. </div> 
-		<div id="instr02"><br>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score. </div> 
-		<div id="instr03"><br>You win the game by matching your total score to random number, you lose the game if  your total score goes above the random number. </div> 
-		<div id="instr04"><br>The value of each crystal is hidden from you until you click on it. </div> 
-		<div id="instr05"><br>Each time when the game starts, the game will change the values of each crystal.</div> 
+		<div id="instr01"><strong>You will be given a random number at the start of the game. </div> 
+		<div id="instr02">There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score. </div> 
+		<div id="instr03">You win the game by matching your total score to random number, you lose the game if  your total score goes above the random number. </div> 
+		<div id="instr04">The value of each crystal is hidden from you until you click on it. </div> 
+		<div id="instr05">Each time when the game starts, the game will change the values of each crystal.</div> 
+		<div id="instr06">To play the game again, click the total score box.</div> 
+		<div id="instr07">To reset the game starting fresh, click the random number box.</div> 
 	</div>
 
 	<div id="randWinsLossesRow">
-		<div id="randNumbBox"> 	</div>
+		<div id="randNumBoxCol"> 
+			<div id="randNumbBoxHdr"> Match this number	</div>
+			<!-- <div id="randNumbBox"> 	</div> -->
+		</div>
 
 		<div id="winsLossesBox">
 			<div id="winsCtr">Wins: <span id="ctrWinsSpan"></span></div>
 			<div id="lossesCtr">Losses: <span id="ctrLossesSpan"></span></div>
 		</div>
+					<div id="randNumbBox"> 	</div>
 	</div>
 
 
@@ -48,7 +54,7 @@
 
 	<div id="totalScoreHdr">Your total score is:</div>
 
-	<div id="totalScoreCtr"></div>
+	<div id="totalScoreCtr">0</div>
 
 	<div id="footerBox">
 		<!-- Footer processing -->
@@ -153,17 +159,25 @@
 			$('#randNumbBox').text(randNum);
 
 			// build the buttons on the screen using JQuery
-			//for (var indexBtn = 0; indexBtn < 4; indexBtn++) {
-			//	var imageBtn = $('<img>');
-			//	imageBtn.attr('src','assets/images/crystal_red.jpg');
-			//	imageBtn.attr('alt', 'crystal_red' );
-			//	imageBtn.addClass('btn1');
+			// for (var indexBtn = 0; indexBtn < 4; indexBtn++) {
+			//  var imageBtn = $('<img>');
+			 //   imageBtn.addClass('btn1');
+			 //	imageBtn.attr('src','assets/images/crystal_red.jpg');
+			// 	imageBtn.attr('alt', 'crystal_red' );
+			 //	imageBtn.attr('id', '#btn1' );
+			  //  imageBtn.addClass('btn1');
 
 			//	//imageBtn.addClass('imageBtn');
-			//	$('#crystalButtons').append(imageBtn);
 
-			//}
+ 
 
+			//$('imageBtn').attr('id', 'btn1');
+
+			//$('#crystalButtons').append(imageBtn);
+		 
+				 
+
+			// }
 
 
 			$("#btn1").click(function(){   		//alert("The Red Crystal was clicked.");
@@ -189,8 +203,19 @@
 
     		// click on the total score box to reset game // wins and losses are not reset
     		$("#totalScoreCtr").click(function(){  // play game again
-    			resetGame();		
+    			resetGame();
             });
+
+            $("#randNumbBox").click(function(){   	// reset game - start a fresh
+				resetGame();
+				randNum = Math.floor(Math.random() * (randMax - randMin + 1)) + randMin;
+				$('#randNumbBox').text(randNum);
+				ctrLosses = 0;
+				ctrWins = 0;
+				$('#ctrWinsSpan').text(ctrWins);
+				$('#ctrLossesSpan').text(ctrLosses);
+
+    		});
     		
 
         	    		
