@@ -21,18 +21,20 @@ body{
 #instructionsBox{
 	/*align-items : justify; */
 	text-align: justify;
-	margin-top: 10px;
+	margin-top: 5px;
 	/*background-color: #fee0c5; */
-	background-color: rgb(254,227,198);
+	background-color: rgba(254,227,198,1.0); 
 	width: 327px;
 	/*height:327px;   */
 	height:270px;  
 	font-size: 10px;
 	letter-spacing: 2px;
 	color:  green;
+opacity: 50%;
 }
 
-#instr01, #instr02, #instr03, #instr04, #instr05{
+#instr01, #instr02, #instr03, #instr04, 
+#instr05, #instr06, #instr07{
 	padding-top: 10px;
 	padding-left:  10px;
 	padding-right: 10px;
@@ -47,10 +49,27 @@ body{
 		font-size: 11px;
 }
 
+#randNumbBoxCol{
+	float:left;
+
+}
+
+#randNumbBoxHdr{
+	background-color: rgb(59,170,115);
+		width: 177px;
+			height:15px;
+				float:left;
+				color: white;
+					text-align: center;
+					padding-top: 5px;
+
+}	
+
 #randNumbBox{
 	background-color: rgb(59,170,115); 
 	width: 177px;
 	height:68px;
+height:60px;
 	float:left;
 
 	font-size: 30px;
@@ -58,6 +77,10 @@ body{
 	//text-align: justify-all;
 
 	padding-top: 25px;
+padding-top: 10px;
+margin-top: 2px;
+	
+
 
 	color: white;
 }
@@ -85,6 +108,11 @@ body{
 	width: 65px;
 }
 
+.btn1, .btn2, .btn3, .btn4{
+	height:65px;
+	width: 65px;
+}
+
 #totalScoreHdr{
 	margin-top: 10px;
 	background-color: rgb(0,139,138);
@@ -94,16 +122,18 @@ body{
 }
 
 #totalScoreCtr{
-	margin-top: 10px;
+	margin-top: 2px;
 	
 	background-color: rgb(0,139,138); 
 	width: 175px;
 	height:85px; 
+height:65px; 
 	color: rgb(0,254,254); 
 
 	font-size: 30px;
 	text-align: center;
 	padding-top: 25px;
+		padding-top: 15px;
 
 }
 
