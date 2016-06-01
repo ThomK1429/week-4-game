@@ -1,9 +1,14 @@
 /* -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -- */
 
-	var btn1Val, btn2Val, btn3Val, btn4Val  = 0; 	// button random number values 
+	var btn1Val = 0, 								// button random number values 
+		btn2Val = 0, 
+		btn3Val = 0, 
+		btn4Val = 0; 
+			
 	var btnMin = 1, btnMax = 12;					// button random number range 1-12
 
-	var ctrLosses, ctrWins = 0;		// counters for wins and losses
+	var ctrLosses = 0,								// counters for wins and losses
+	    ctrWins   = 0;		
 
 	var randNum = 0, randMin = 19, randMax = 120;	// a random number range 19-120
 
