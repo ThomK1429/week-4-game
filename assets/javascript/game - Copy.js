@@ -3,7 +3,8 @@
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 	
 
-	
+	// THE MAINLINE OF THE GAME - ALL THE ACTION TAKES PLACE HERE
+
 		$(document).ready(function(){
 
 		/* -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -- */
@@ -25,12 +26,52 @@
 		/* -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -- */
 
 
-		function genRandNumRange(min, max) {
-			var randNum =  Math.floor(Math.random() * (max - min + 1)) + min;
-			return randNum;
-		}
+			function genRandNumRange(min, max) {
+				var randNum =  Math.floor(Math.random() * (max - min + 1)) + min;
+				return randNum;
+			}
+
+			randNum = genRandNumRange(randMin, randMax);
+			//'alert("randNum=" + randNum);
+
+			btn1Val = genRandNumRange(btnMin, btnMax);
+			btn2Val = genRandNumRange(btnMin, btnMax);
+			btn3Val = genRandNumRange(btnMin, btnMax);
+			btn4Val = genRandNumRange(btnMin, btnMax);
+			//alert(btn1Val + " " + btn2Val + " " + btn3Val + " " + btn4Val);
+
+			
+			$('#ctrWinsSpan').text(ctrWins);
+			$('#ctrLossesSpan').text(ctrLosses);
+
+			function clicked(btnXVal){
+				//You already won/lost - alert already displayed
+				if(totScore >= randNum){
+    				alert("You are done...Reset the game to begin again!!");
+    				return;
+    			}
+
+				totScore = totScore + btnXVal;
+        		$('#totalScoreCtr').text(totScore);
+        		if(totScore == randNum){
+        			ctrWins++;
+        			$('#ctrWinsSpan').text(ctrWins);
+    				alert("You Win!!");
+    				return;
+    			}
+
+    			if(totScore > randNum){
+           			ctrLosses++;
+           			$('#ctrLossesSpan').text(ctrLosses);
+    				alert("You Lose!!");
+    				return;
+    			}
+			}
+
+		// - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
+		
 
 
 
@@ -52,59 +93,14 @@
 			btn3Val = genRandNumRange(btnMin, btnMax);
 			btn4Val = genRandNumRange(btnMin, btnMax);
 
+
 			$('#randNumbBox').text(randNum);
 			$('#totalScoreCtr').text(totScore);
+
+		
 		}
 
 
-
-
-		function clicked(btnXVal){
-			//You already won/lost - alert already displayed
-			if(totScore >= randNum){
-    			alert("You are done...Reset the game to begin again!!");
-    			return;
-    		}
-
-			totScore = totScore + btnXVal;
-        	$('#totalScoreCtr').text(totScore);
-        	if(totScore == randNum){
-        		ctrWins++;
-        		$('#ctrWinsSpan').text(ctrWins);
-    			alert("You Win!!");
-    			return;
-    		}
-
-    		if(totScore > randNum){
-        		ctrLosses++;
-          		$('#ctrLossesSpan').text(ctrLosses);
-    			alert("You Lose!!");
-    			return;
-    		}
-		}
-
-
-
-
-			randNum = genRandNumRange(randMin, randMax);
-			//'alert("randNum=" + randNum);
-
-			btn1Val = genRandNumRange(btnMin, btnMax);
-			btn2Val = genRandNumRange(btnMin, btnMax);
-			btn3Val = genRandNumRange(btnMin, btnMax);
-			btn4Val = genRandNumRange(btnMin, btnMax);
-			//alert(btn1Val + " " + btn2Val + " " + btn3Val + " " + btn4Val);
-
-			
-			$('#ctrWinsSpan').text(ctrWins);
-			$('#ctrLossesSpan').text(ctrLosses);
-
-
-
-		// - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-		// THE MAINLINE OF THE GAME - ALL THE ACTION TAKES PLACE HERE - click events!!!
 			$('#randNumbBox').text(randNum);
 
 			// - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
