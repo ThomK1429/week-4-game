@@ -1,19 +1,6 @@
 
 
-	function genRandNumRange(min, max) {
-			var randNum =  Math.floor(Math.random() * (max - min + 1)) + min;
-			return randNum;
-	}
-
-		randNum = genRandNumRange(randMin, randMax);
-		//'alert("randNum=" + randNum);
-
-		btn1Val = genRandNumRange(btnMin, btnMax);
-		btn2Val = genRandNumRange(btnMin, btnMax);
-		btn3Val = genRandNumRange(btnMin, btnMax);
-		btn4Val = genRandNumRange(btnMin, btnMax);
-		//alert(btn1Val + " " + btn2Val + " " + btn3Val + " " + btn4Val);
-
+	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 	
 
 	// THE MAINLINE OF THE GAME - ALL THE ACTION TAKES PLACE HERE
@@ -38,6 +25,20 @@
 
 		/* -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -- */
 
+
+			function genRandNumRange(min, max) {
+				var randNum =  Math.floor(Math.random() * (max - min + 1)) + min;
+				return randNum;
+			}
+
+			randNum = genRandNumRange(randMin, randMax);
+			//'alert("randNum=" + randNum);
+
+			btn1Val = genRandNumRange(btnMin, btnMax);
+			btn2Val = genRandNumRange(btnMin, btnMax);
+			btn3Val = genRandNumRange(btnMin, btnMax);
+			btn4Val = genRandNumRange(btnMin, btnMax);
+			//alert(btn1Val + " " + btn2Val + " " + btn3Val + " " + btn4Val);
 
 			
 			$('#ctrWinsSpan').text(ctrWins);
@@ -68,6 +69,12 @@
 			}
 
 		// - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+		
+
+
+
 
 		function resetGame(){
 			//alert("resetGame function called")
