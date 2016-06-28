@@ -7,7 +7,7 @@ body{
 #headerBox{
 		background-color: #d06a1F;
 		/*background-color: rgb(254,227,198); */
-		width: 200px;
+		width: 225px;
 		/* height:50px; */
 		color: white;
 		font-size: 22px;
@@ -15,6 +15,8 @@ body{
 		letter-spacing: 1px;
 		padding-top: 22px;
 		padding-bottom: 22px;
+
+		border-radius: 5px;
 }
 
 #footerBox{
@@ -30,12 +32,15 @@ body{
 	background-color: rgba(254,227,198,1.0); 
 	width: 327px;
 	/*height:327px;   */
-	height:270px;  
+	/*height:270px;   */ 
+	height:200px;
 	font-size: 10px;
 	letter-spacing: 2px;
 	color:  green;
 	font-weight: bold;
 	opacity: 50%;
+
+	border-radius: 5px;
 }
 
 #instr01, #instr02, #instr03, #instr04, 
@@ -71,26 +76,28 @@ body{
 									padding-bottom: 2px;
 							font-size: 15px;
 
+	border-radius: 5px;
 }	
 
 #randNumbBox{
 	background-color: rgb(59,170,115); 
 	width: 177px;
-	height:68px;
-height:60px;
+	/* height:68px; */
+	height:60px;
 	float:left;
 
 	font-size: 30px;
 	text-align: center;
 	//text-align: justify-all;
 
-	padding-top: 25px;
-padding-top: 8px;
-margin-top: 2px;
+	/*padding-top: 25px; */
+	padding-top: 8px;
+	margin-top: 2px;
 	
-
-
 	color: white;
+
+	border-radius: 5px;
+	
 }
 
 #winsLossesBox{
@@ -99,6 +106,9 @@ margin-top: 2px;
 	width: 65px;
 	height:90px;
 	float: right;
+
+	border-radius: 5px;
+
 }
 
 #winsCtr{
@@ -115,6 +125,7 @@ margin-top: 2px;
 	height:65px;
 	width: 65px;
 	
+	border-radius: 5px;
 }
 
 .btn1, .btn2, .btn3, .btn4{
@@ -129,6 +140,8 @@ margin-top: 2px;
 	width: 175px;
 	height:20px; 
 	color: rgb(0,254,254);
+
+	border-radius: 5px;
 }
 
 #totalScoreCtr{
@@ -142,9 +155,21 @@ margin-top: 2px;
 
 	font-size: 30px;
 	text-align: center;
-	padding-top: 25px;
-		padding-top: 10px;
+	/*padding-top: 25px; */
+	padding-top: 10px;
 
+	border-radius: 5px;
+}
+
+#gameButtons{
+	margin-top: 10px;
+}
+
+#playAgain, #resetGame{
+	border: 2px solid #a1a1a1;
+	border-radius: 25px;
+	background-color: white; 
+	color: black ;
 }
 
 #footerBox{
@@ -162,5 +187,5 @@ margin-top: 2px;
 
 	font-weight: bold;
 
-
+	border-radius: 5px;
 }

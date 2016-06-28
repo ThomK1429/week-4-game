@@ -128,25 +128,48 @@
         		clicked(btn4Val);
         	});
 
+    		$("#btn4").click(function(){		//alert("The Green Crystal was clicked");
+        		clicked(btn4Val);
+        	});
+
     		// click on the total score box to reset game // wins and losses are not reset
     		$("#totalScoreCtr").click(function(){  // play game again
+    			//resetGame();
+            });
+
+    		// click to reset game // wins and losses are not reset
+    		$("#playAgain").click(function(){  // play game again
     			resetGame();
             });
 
 			// - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            $("#randNumbBox").click(function(){   	// reset game - start a fresh
-				resetGame();
-				randNum = Math.floor(Math.random() * (randMax - randMin + 1)) + randMin;
-				$('#randNumbBox').text(randNum);
-				ctrLosses = 0;
-				ctrWins = 0;
-				$('#ctrWinsSpan').text(ctrWins);
-				$('#ctrLossesSpan').text(ctrLosses);
 
+			// Reset Game - initializing ctrLosses and ctrWins - added 2016 06 28
+
+
+			  $("#resetGame").click(function(){   	// reset game - start a fresh
+					resetGame();
+					randNum = Math.floor(Math.random() * (randMax - randMin + 1)) + randMin;
+					$('#randNumbBox').text(randNum);
+					ctrLosses = 0;
+					ctrWins = 0;
+					$('#ctrWinsSpan').text(ctrWins);
+					$('#ctrLossesSpan').text(ctrLosses);
     		});
+
+			  /*
+        $("#randNumbBox").click(function(){   	// reset game - start a fresh
+					resetGame();
+					randNum = Math.floor(Math.random() * (randMax - randMin + 1)) + randMin;
+					$('#randNumbBox').text(randNum);
+					ctrLosses = 0;
+					ctrWins = 0;
+					$('#ctrWinsSpan').text(ctrWins);
+					$('#ctrLossesSpan').text(ctrLosses);
+    		});  */
     		
-            // - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      // - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         	    		
 
